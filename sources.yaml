@@ -42,3 +42,78 @@ sources:
     category: Claude
     kind: scrape_claude_relnotes
     url: https://platform.claude.com/docs/en/release-notes/overview
+
+  # ===== IT（AWS/Claude以外）: section で セキュリティ→AI→ツール の順に並ぶ =====
+
+  # --- 🔒 セキュリティ（海外・鮮度重視）---
+  - key: sec_thehackernews
+    name: The Hacker News
+    category: IT
+    section: セキュリティ
+    kind: rss
+    url: https://feeds.feedburner.com/TheHackersNews
+
+  - key: sec_bleepingcomputer
+    name: BleepingComputer
+    category: IT
+    section: セキュリティ
+    kind: rss
+    url: https://www.bleepingcomputer.com/feed/
+
+  - key: sec_krebs
+    name: Krebs on Security
+    category: IT
+    section: セキュリティ
+    kind: rss
+    url: https://krebsonsecurity.com/feed/
+
+  # --- 🤖 AI（Claude以外）---
+  - key: ai_openai
+    name: OpenAI News
+    category: IT
+    section: AI
+    kind: rss
+    url: https://openai.com/news/rss.xml
+
+  - key: ai_deepmind
+    name: Google DeepMind Blog
+    category: IT
+    section: AI
+    kind: rss
+    url: https://deepmind.google/blog/rss.xml
+
+  - key: ai_huggingface
+    name: Hugging Face Blog
+    category: IT
+    section: AI
+    kind: rss
+    url: https://huggingface.co/blog/feed.xml
+
+  - key: ai_simonwillison
+    name: Simon Willison's Weblog
+    category: IT
+    section: AI
+    kind: rss
+    url: https://simonwillison.net/atom/everything/
+
+  # --- 🛠 ツール（Product Hunt的）---
+  - key: tool_producthunt
+    name: Product Hunt
+    category: IT
+    section: ツール
+    kind: rss
+    url: https://www.producthunt.com/feed
+
+  - key: tool_hn_show
+    name: Hacker News (Show HN)
+    category: IT
+    section: ツール
+    kind: rss
+    url: https://hnrss.org/show
+
+  - key: tool_github_trending
+    name: GitHub Trending
+    category: IT
+    section: ツール
+    kind: scrape_github_trending
+    url: https://github.com/trending
