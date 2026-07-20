@@ -10,6 +10,20 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-20
+### Changed
+- 登録形式を「1記事=1レコード」から **カテゴリ別・日次ダイジェストページ** に変更。
+  毎日カテゴリごとに1ページ作成（タイトル=日付、本文=記事のリンク箇条書き）。
+- 登録先を専用DBから既存の `DB_APPLICATION_PAGES` に変更。`NOTE`（ニュース）/ `TAG`（カテゴリ）リレーションを設定。
+- 新しい Notion API（データソース構造）に対応（`pages.create` の parent を `data_source_id` 指定に）。
+### Added
+- 対象カテゴリを `sources.py` から自動導出（`CATEGORY_ORDER`）。
+- `TAG` を「ニュースノート配下で名前がカテゴリ名と一致するタグ」から**実行時に自動解決**（IDのハードコード廃止）。
+  → 新カテゴリの追加が「ソース1行 ＋ Notionでタグ作成」だけで済む。
+- 運用ガイド（ソース/カテゴリの追加方法、任意サイトの扱い方 等）を README に追記。
+### Removed
+- ダイジェスト専用DB（NAME/DATE）前提の設計、および TAG ID のハードコード。
+
 ## [0.1.0] - 2026-07-20
 ### Added
 - AWS/Claude の5ソースからの情報収集
@@ -22,5 +36,6 @@
 - `--dry-run` / `--seed` の実行モード
 - GitHub Actions による毎朝（07:00 JST）の定期実行
 
-[Unreleased]: https://github.com/argondev22/info-radar/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/argondev22/info-radar/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/argondev22/info-radar/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/argondev22/info-radar/releases/tag/v0.1.0

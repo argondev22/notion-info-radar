@@ -48,3 +48,7 @@ SOURCES = [
         url="https://platform.claude.com/docs/en/release-notes/overview",
     ),
 ]
+
+# ソース定義から自動導出する表示順。
+# 新カテゴリのソースを SOURCES に足せば、ここに自動で含まれる（他ファイルの変更不要）。
+CATEGORY_ORDER = list(dict.fromkeys(s.category for s in SOURCES))
