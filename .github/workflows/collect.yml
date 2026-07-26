@@ -2,7 +2,7 @@ name: notion-info-radar
 
 on:
   schedule:
-    - cron: "0 21 * * *" # 06:00 JST（前日21:00 UTC）
+    - cron: "0 19 * * *" # 04:00 JST
   workflow_dispatch: {}
 
 permissions:
